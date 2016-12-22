@@ -2,7 +2,18 @@
 
 Mono is a typewriter inspired theme for the awesome markdown editor [Typora](https://www.typora.io). I wanted the basic look of plain text markdown but with a few enhancements, like the hashes for headers hanging out on the left side.
 
+
+
+![image](preview.png)
+
+
+
 Currently it is only tested on the MacOS version of Typora and it uses some bleeding edge CSS like variables which I have no idea if they work im Typora for other platforms. It is still plenty of work left before it is a complete theme.
+
+Useful Links
+
+* [Markdown syntax documentation](https://daringfireball.net/projects/markdown/syntax)
+* [Documentation for writing custom Typora themes](http://theme.typora.io/doc/Write-Custom-Theme/)
 
 ## Inline elements
 
