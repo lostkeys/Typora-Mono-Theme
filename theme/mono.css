@@ -1,0 +1,424 @@
+/**
+ * import styles
+ */
+
+@import '';
+
+/* Font Face */
+@font-face {
+    font-family: 'Cousine';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Cousine'), local('Cousine-Regular'), url('./mono/Cousine-Regular.ttf');
+}
+@font-face {
+    font-family: 'Cousine';
+    font-style: italic;
+    font-weight: normal;
+    src: local('Cousine'), local('Cousine-Italic'), url('./mono/Cousine-Italic.ttf')
+}
+
+@font-face {
+    font-family: 'Cousine';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Cousine'), local('Cousine-Bold'), url('./mono/Cousine-Bold.ttf')
+}
+
+@font-face {
+    font-family: 'Cousine';
+    font-style: italic;
+    font-weight: bold;
+    src: local('Cousine'), local('Cousine-BoldItalic'), url('./mono/Cousine-BoldItalic.ttf')
+}
+
+html {
+  --font-color: #E76966;
+  --body-font: 'Cousine', monospace;
+  --font-size: 14px;
+  --background-color: white;
+  --line-height: 1.4;
+}
+
+html {
+	font-size: var(--font-size);
+	background-color: var(--background-color);
+}
+
+html,
+body {
+  color: var(--font-color);
+  font-family: var(--body-font);
+  line-height: var(--line-height);
+}
+
+/* on Windows/Linux, it is the part that is not titlebar or status bar.*/
+content {
+
+}
+
+#write {
+	/* size of writing area: */
+  padding-left: 10ch;
+  padding-right: 10ch;
+  max-width: 90ch;
+}
+
+/**
+ * ---------------------
+ * Block Elements
+ */
+
+/* yaml */
+pre.md-meta-block {
+    
+}
+
+/* headings */
+h1,h2,h3,h4,h5,h6 {
+  font-size: var(--font-size);
+  font-weight: normal;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+h1 {
+  margin-top: 1rem;
+}
+h1:not(:first-child) {
+  margin-top: 6rem;
+}
+h2, h3 {
+  margin-top: 3rem;
+}
+h4, h5, h6 {
+  margin-top: 0rem;
+  margin-bottom: 0rem
+}
+
+h1::after {
+  content: '===========================' !important;
+  display: block;
+  font-weight: normal;
+}
+
+h2::after {
+  content: '----------------------------' !important;
+  display: block;
+  font-weight: normal;
+}
+
+h1::Before {
+  content: '# ';
+  margin-left: -2ch;
+}
+h2::Before {
+  content: '## ';
+  margin-left: -3ch;
+}
+h3::Before {
+  content: '### ';
+  margin-left: -4ch;
+}
+h4::Before {
+  content: '#### ';
+  margin-left: -5ch;
+}
+h5::Before {
+  content: '##### ';
+  margin-left: -6ch;
+}
+h6::Before {
+  content: '###### ';
+  margin-left: -7ch;
+}
+
+/* table */
+table {
+}
+
+/* table header */
+thead {
+}
+
+/* table row */
+tr {}
+
+/* table cell */
+td,
+th {
+}
+
+/* tooltip above tables */
+.md-table-edit {
+
+}
+
+/* lists */
+ul {
+  list-style: none;
+  padding-left: 0ch;
+}
+
+ol {
+  padding-left: 4ch
+}
+
+ul li {
+  padding-left: 4ch;
+}
+
+ul li::before {
+  content: "* ";
+  float: left; 
+  margin-left: -2ch;
+}
+
+li p {
+  margin: 0;
+}
+
+/* blockquote & Pre */
+blockquote, pre {
+  margin: 1rem 0;
+  padding-left: 4ch;
+  position: relative;
+  overflow: hidden;
+}
+
+blockquote :first-child::before {
+  content: ">\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A";
+  float:left;
+  position: absolute;
+  margin-left: -2ch;
+  white-space: pre;
+}
+
+blockquote :first-child {
+  margin-top: 0;
+}
+
+blockquote :last-child {
+  margin-bottom:0;
+}
+
+/* hr */
+hr {
+  border:none;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+hr::after {
+  content: "— — — — —";
+  text-align: center;
+  display: block;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+/* diagram panel */
+.md-diagram-panel {
+
+}
+
+/* diagram panel in preview */
+#write .md-focus .md-diagram-panel {
+
+}
+
+/* reference link definition */
+.md-def-link {
+
+}
+
+/* footnote definition */
+.md-def-footnote {
+
+}
+
+/**
+ * Code Fences
+ * see http:/*support.typora.io/Code-Block-Styles
+ */
+
+/**
+ * Mermaid Diagrams
+ * see https:/*github.com/knsv/mermaid/blob/master/dist/mermaid.css
+ */
+
+/**
+ * Inline Elements
+ */
+
+/* basic styles */
+
+code {
+  font-family: var(--font-stack);
+  line-height: 1.4;
+  font-size: var(--font-size);
+}
+
+strong {
+
+}
+
+em {
+
+}
+
+a {
+  color:  inherit;
+}
+
+img {
+
+}
+
+/* extend styles */
+
+mark {
+
+}
+ 
+del {
+
+}
+
+sub {
+
+}
+
+sup {
+
+}
+
+/**
+ * Source Code Mode
+ * see http:/*support.typora.io/Code-Block-Styles
+ */
+#typora-source {
+	.cm-header {
+
+	}
+
+	.cm-strong {
+
+	}
+
+	.cm-em {
+
+	}
+
+	.cm-link {
+
+	}
+
+	.cm-string {
+
+	}
+
+	.cm-comment {
+
+	}
+}
+
+/**
+ * Control UI (optional)
+ */
+
+/* button style */
+.btn,
+.btn .btn-default {
+	
+}
+
+/* outline area when popover */
+#outline-dropmenu {
+
+}
+
+/* side bar */
+.pin-outline #outline-dropmenu {
+
+}
+
+/* when sidepanel is visible */
+.pin-outline #write {
+
+}
+
+/* dialogs */
+.modal-content {}
+.modal-title {}
+
+/* search panel */
+#md-searchpanel {
+
+}
+
+#write div.md-toc-tooltip {
+	background-color: var(--background-color);
+}
+
+/**
+ * Control UI on Mac (optional)
+ */
+
+/* quick open panel */
+#typora-quick-open {
+	/*background-color: #525C65; */
+}
+
+#md-searchpanel,
+.on-search-panel-open header,
+.modal-content,
+.popover,
+.context-menu {
+	/*background-color: @dialog-background; */
+}
+
+.popover.bottom > .arrow:after {
+	/*border-bottom-color: @dialog-background; */
+}
+
+/**
+ * Control UI on Windows/Linux (optional)
+ */
+
+/* context menu */
+.context-menu {}
+
+/* statue bar */
+footer {
+
+}
+
+/**
+ * Control UI on Windows Unibody Style (optional)
+ */
+
+/* left side mega menu */
+.megamenu-content {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
